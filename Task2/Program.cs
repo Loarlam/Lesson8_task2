@@ -9,7 +9,18 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            
+            string inputLine;
+            int colorValue = 0;
+
+            Console.WriteLine("Строка: ");
+            inputLine = Console.ReadLine();
+
+            Console.WriteLine("\nЦвет (1 - красный, 2 - голубой, 3 - желтый, 4 - зеленый:)");
+            colorValue = Int32.Parse(Console.ReadLine());
+
+            inputLine.Print(colorValue);
+
+            Console.ReadKey();
         }
     }
 }

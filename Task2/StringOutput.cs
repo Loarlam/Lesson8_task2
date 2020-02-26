@@ -12,7 +12,7 @@ namespace Task2
             Green = 4
         }
 
-        public static void Print(string stroka, int color)
+        public static void Print(this string stroka, int color)
         {
             switch (color)
             {
@@ -29,10 +29,11 @@ namespace Task2
                     Console.ForegroundColor = ConsoleColor.Green;
                     break;
                 default:
-                    Console.WriteLine($"Цвета под цифрой {color} нет в нашей базе!");
+                    Console.WriteLine($"\nЦвета под цифрой {color} нет в нашей базе!");
                     break;
             }
 
+            Console.WriteLine("\nВ цвете:");
             Console.WriteLine(stroka);
             Console.ResetColor();
         }
